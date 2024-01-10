@@ -32,6 +32,7 @@ const  App = () =>  {
     address: 'Shangaani'
   }
   return (
+    // for props
     <div className="App">
       <Person person={person1}/>
       <Person person={person2}/>
