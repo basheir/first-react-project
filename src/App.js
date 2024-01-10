@@ -33,11 +33,9 @@ const  App = () =>  {
   }
   return (
     <div className="App">
-      {/* <Person person={person1}/>
+      <Person person={person1}/>
       <Person person={person2}/>
-      <Person person={person3}/> */}
-
-      
+      <Person person={person3}/>
     </div>
   );
 }
