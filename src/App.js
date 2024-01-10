@@ -1,44 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, useEffect } from "react";
 
+const App = () => {
+  const [counter, setCouter] = useState(0);
+  useEffect(() => {
+    setCouter(100);
+  }, []);
 
-const Person = (props) => {
   return (
-    <>
-      <div className='person'>
-        <p>Name: {props.person.name}</p>
-        <p>Phone: {props.person.phone}</p>
-        <p>Address: {props.person.address}</p>
-      </div>
-    </>
-  )
-}
-
-
-const  App = () =>  {
-  const person1  = {
-    name: "Bashir", 
-    phone: 619756464,
-    address: 'Howlwadaag'
-  }
-  const person2  = {
-    name: "Ahmed", 
-    phone: 62956666466,
-    address: 'Hodan'
-  }
-  const person3  = {
-    name: "Abdirahman", 
-    phone: 4875555555,
-    address: 'Shangaani'
-  }
-  return (
-    // for props
     <div className="App">
-      <Person person={person1}/>
-      <Person person={person2}/>
-      <Person person={person3}/>
+      <button onClick={() => setCouter((prevCount) => prevCount - 1)}>-</button>
+      <h1>{counter}</h1>
+      <button onClick={() => setCouter((prevCount) => prevCount + 1)}>+</button>
     </div>
   );
-}
+};
 
 export default App;
