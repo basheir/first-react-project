@@ -1,23 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+const Person = (props) => {
+  return (
+    <>
+      <div className='person'>
+        <p>Name: {props.person.name}</p>
+        <p>Phone: {props.person.phone}</p>
+        <p>Address: {props.person.address}</p>
+      </div>
+    </>
+  )
+}
+
+
+const  App = () =>  {
+  const person1  = {
+    name: "Bashir", 
+    phone: 619756464,
+    address: 'Howlwadaag'
+  }
+  const person2  = {
+    name: "Ahmed", 
+    phone: 62956666466,
+    address: 'Hodan'
+  }
+  const person3  = {
+    name: "Abdirahman", 
+    phone: 4875555555,
+    address: 'Shangaani'
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Person person={person1}/>
+      <Person person={person2}/>
+      <Person person={person3}/> */}
+
+      
     </div>
   );
 }
